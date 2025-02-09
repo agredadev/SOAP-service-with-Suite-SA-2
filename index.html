@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soap Service Suite SA</title>
+    <!-- Tus CSS -->
+    <link rel="stylesheet" href="./public/css/main.css" />
+    <link rel="stylesheet" href="./public/css/page-create-orphanage.css" />
+    <link rel="stylesheet" href="./public/css/animations.css" />
+    <link rel="stylesheet" href="./public/css/sidebar.css" />
+    <link rel="stylesheet" href="./public/css/map.css" />
+    <link rel="stylesheet" href="./public/css/form.css" />
+    <link rel="stylesheet" href="./public/css/buttons.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+  </head>
+
+  <body>
+    <div id="page-create-orphanage">
+      <main class="animate-appear with-sidebar">
+        <div class="logos"></div>
+        <form action="">
+          <fieldset>
+            <legend>Solicitud de compra</legend>
+
+            <!-- Tus campos -->
+            <div class="input-block">
+              <label for="solicitante">Solicitante</label>
+              <input id="solicitante" type="text" name="solicitante" required />
+            </div>
+
+            <div class="input-block">
+              <label for="email">Email del solicitante</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+
+            <div class="input-block">
+              <label for="product">Producto</label>
+              <br />
+              <select class="barra" name="product" id="product">
+                <option value="" disabled selected hidden>Products</option>
+                <option value="Xiaomi Redmi Note 8">Xperia Z2 Tablet</option>
+                <option value="Samsung Galaxy S5">Xperia Tablet Z</option>
+                <option value="Smartphone Asus Zenfone">SGPT112BR/S</option>
+                <option value="Iphone 5s">Xperia Z3 Tablet Compact</option>
+              </select>
+            </div>
+
+            <div class="input-block">
+              <label for="fecha_solicitud">Fecha de solicitud de compra</label>
+              <input
+                id="fecha_solicitud"
+                type="date"
+                name="fecha_solicitud"
+                required
+              />
+            </div>
+
+            <div class="input-block">
+              <label for="cantidad">Cantidad</label>
+              <input id="cantidad" type="number" name="cantidad" required />
+            </div>
+
+            <div class="input-block">
+              <label for="price_project">Precio estimado</label>
+              <input
+                id="price_project"
+                type="number"
+                name="price_project"
+                required
+              />
+            </div>
+
+            <div class="input-block">
+              <label for="justify"
+                >Justificación de la compra<span
+                  >300 characters maximum</span
+                ></label
+              >
+              <textarea id="justify" name="justify" required></textarea>
+            </div>
+
+            <button
+              class="primary-button"
+              value="Solicitar"
+              type="submit"
+              onclick="soapRequest()"
+            >
+              Enviar solicitud
+            </button>
+          </fieldset>
+        </form>
+      </main>
+    </div>
+
+    <!-- Importa tu script externo justo antes de cerrar body -->
+    <script src="./public/js/soapRequest.js"></script>
+  </body>
+</html>
